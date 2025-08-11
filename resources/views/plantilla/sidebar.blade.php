@@ -24,7 +24,7 @@
                 <li class="pc-item pc-hasmenu">
                     <a href="#" class="pc-link"><span class="pc-micon"></span><span class="pc-mtext">Capacitaciones</span><span class="pc-arrow"><i class="chevron-right"></i></span></a>
                     <ul class="pc-submenu">
-                        <li class="pc-item"><a class="pc-link" href="#">Informacion</a></li>
+                        <li class="pc-item"><a class="pc-link" href="{{ route('capacitaciones.index') }}">Informacion</a></li>
                     </ul>
                 </li>
                 <li class="pc-item">

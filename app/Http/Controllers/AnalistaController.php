@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Capacitacion;
+use App\Models\Analista;
 use Illuminate\Http\Request;
 
-class CapacitacionController extends Controller
+class AnalistaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('capacitaciones.index');
+        //
     }
 
     /**
@@ -20,7 +20,7 @@ class CapacitacionController extends Controller
      */
     public function create()
     {
-        return view('capacitaciones.create');
+        //
     }
 
     /**
@@ -34,7 +34,7 @@ class CapacitacionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Capacitacion $capacitacion)
+    public function show(Analista $analista)
     {
         //
     }
@@ -42,7 +42,7 @@ class CapacitacionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Capacitacion $capacitacion)
+    public function edit(Analista $analista)
     {
         //
     }
@@ -50,7 +50,7 @@ class CapacitacionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Capacitacion $capacitacion)
+    public function update(Request $request, Analista $analista)
     {
         //
     }
@@ -58,7 +58,7 @@ class CapacitacionController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Capacitacion $capacitacion)
+    public function destroy(Analista $analista)
     {
         //
     }
