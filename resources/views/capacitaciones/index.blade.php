@@ -3,7 +3,7 @@
 
 <div class="container">
 
-<dic class="card mt-5">
+<dic class="card mt-4">
     <div class="card-header" style="background:#082140">
         <h4 class="card-tittle mb-0 text-white">Registro de Capacitaciones</h4>
     </div>

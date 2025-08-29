@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('analistas', function (Blueprint $table) {
             $table->id();
-            $table->enum('analista', ['Yaritzel', 'Saireth', 'Cinthia', 'Hamara']);
+            $table->enum('analista', ['Yaritzel', 'Saireth', '', 'Hamara']);
             $table->timestamps();
         });
     }

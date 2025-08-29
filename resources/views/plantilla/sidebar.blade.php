@@ -44,12 +44,14 @@
                     <label>Pages</label>
                     <i class="ti ti-news"></i>
                 </li>
+                
                 <li class="pc-item">
                     <a href="!#" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-lock"></i></span>
                         <span class="pc-mtext">Login</span>
                     </a>
                 </li>
+
                 <li class="pc-item">
                     <a href="!#" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-user-plus"></i></span>

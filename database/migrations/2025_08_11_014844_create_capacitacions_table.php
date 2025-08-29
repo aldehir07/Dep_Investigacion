@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('capacitacions', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre', 50);
+            $table->string('capacitacion', 50);
             $table->unsignedBigInteger('unidad_id');
             $table->unsignedBigInteger('analista_id');
             $table->unsignedBigInteger('proveedor_id');
@@ -22,10 +22,12 @@ return new class extends Migration
             $table->date('fecha_solicitud')->nullable();
             $table->date('fecha_inicio');
             $table->date('fecha_final');
-            $table->enum('nacional', 'internacional');
+            $table->enum('N_I', ['nacional', 'internacional']);
             $table->string('nombre_contacto', 30)->nullable();
+            $table->integer('tel_contacto')->nullable();
             $table->string('tipo_pago', 15);
             $table->integer('cant_participantes');
+            $table->integer('evento')->nullable();
             $table->decimal('valor_unitario');
             $table->decimal('valor_total');
             $table->string('fondo_certificado', 30)->nullable();
