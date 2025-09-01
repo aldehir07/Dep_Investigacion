@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('analistas', function (Blueprint $table) {
+        Schema::create('add_capacitacions', function (Blueprint $table) {
             $table->id();
-            $table->enum('analista', ['Yaritzel', 'Saireth', '', 'Hamara']);
+            $table->string('capacitacion', 100);
             $table->timestamps();
         });
     }
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('analistas');
+        Schema::dropIfExists('add_capacitacions');
     }
 };

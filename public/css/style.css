@@ -468,9 +468,6 @@ th {
   border-width: 0;
 }
 
-label {
-  display: inline-block;
-}
 
 button {
   border-radius: 0;
@@ -2349,10 +2346,7 @@ textarea.form-control-lg {
   filter: none;
   opacity: 0.5;
 }
-.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
-  cursor: default;
-  opacity: 0.5;
-}
+
 
 .form-switch {
   padding-left: 2.5em;
@@ -2507,27 +2501,8 @@ textarea.form-control-lg {
   min-height: calc(3.5rem + calc(var(--bs-border-width) * 2));
   line-height: 1.25;
 }
-.form-floating > label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  height: 100%;
-  padding: 1rem 0.75rem;
-  overflow: hidden;
-  text-align: start;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  pointer-events: none;
-  border: 1px solid transparent;
-  transform-origin: 0 0;
-  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
-}
-@media (prefers-reduced-motion: reduce) {
-  .form-floating > label {
-    transition: none;
-  }
-}
+
+
 .form-floating > .form-control,
 .form-floating > .form-control-plaintext {
   padding: 1rem 0.75rem;
@@ -2558,53 +2533,7 @@ textarea.form-control-lg {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
-  color: rgba(var(--bs-body-color-rgb), 1);
-  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
-}
-.form-floating > .form-control:focus ~ label,
-.form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .form-control-plaintext ~ label,
-.form-floating > .form-select ~ label {
-  color: rgba(var(--bs-body-color-rgb), 1);
-  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
-}
-.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label::after {
-  position: absolute;
-  inset: 1rem 0.375rem;
-  z-index: -1;
-  height: 1.5em;
-  content: "";
-  background-color: #ffffff;
-  border-radius: 4px;
-}
-.form-floating > .form-control:focus ~ label::after,
-.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
-.form-floating > .form-control-plaintext ~ label::after,
-.form-floating > .form-select ~ label::after {
-  position: absolute;
-  inset: 1rem 0.375rem;
-  z-index: -1;
-  height: 1.5em;
-  content: "";
-  background-color: #ffffff;
-  border-radius: 4px;
-}
-.form-floating > .form-control:-webkit-autofill ~ label {
-  color: rgba(var(--bs-body-color-rgb), 1);
-  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
-}
-.form-floating > .form-control-plaintext ~ label {
-  border-width: 1px 0;
-}
-.form-floating > :disabled ~ label,
-.form-floating > .form-control:disabled ~ label {
-  color: #6c757d;
-}
-.form-floating > :disabled ~ label::after,
-.form-floating > .form-control:disabled ~ label::after {
-  background-color: #e9ecef;
-}
+
 
 .input-group {
   position: relative;
@@ -2772,9 +2701,7 @@ textarea.form-control-lg {
 .was-validated .form-check-input:valid:focus, .form-check-input.is-valid:focus {
   box-shadow: 0 0 0 0.2rem rgba(82, 196, 26, 0.25);
 }
-.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
-  color: #52c41a;
-}
+
 
 .form-check-inline .form-check-input ~ .valid-feedback {
   margin-left: 0.5em;
@@ -2863,9 +2790,7 @@ textarea.form-control-lg {
 .was-validated .form-check-input:invalid:focus, .form-check-input.is-invalid:focus {
   box-shadow: 0 0 0 0.2rem rgba(255, 77, 79, 0.25);
 }
-.was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label {
-  color: #ff4d4f;
-}
+
 
 .form-check-inline .form-check-input ~ .invalid-feedback {
   margin-left: 0.5em;
@@ -14930,9 +14855,6 @@ strong {
 .btn-page .btn-group .btn:last-child {
   border-left: none;
 }
-.btn-page .btn-group label:first-of-type {
-  border-right: none;
-}
 
 .material-icons-two-tone {
   background-color: #212529;
@@ -15919,9 +15841,7 @@ pre[class*=language-] > code {
 .pc-sidebar .pc-caption i {
   display: none;
 }
-.pc-sidebar .pc-caption label {
-  margin-bottom: 0;
-}
+
 .pc-sidebar .pc-caption span:not(.badge) {
   display: block;
   color: #67758a;
@@ -17084,10 +17004,7 @@ pre[class*=language-] > code {
   }
 }
 @media (max-width: 575.98px) {
-  .col-form-label {
-    padding-top: 0;
-    padding-bottom: 5px;
-  }
+
   .pc-container .pc-content {
     padding: 15px;
   }
@@ -17631,10 +17548,7 @@ pre[class*=language-] > code {
   opacity: 1;
   transition: opacity ease-in 0.3s;
 }
-.to-do-list .form-check-input:checked ~ label {
-  text-decoration: line-through;
-  opacity: 0.6;
-}
+
 
 .latest-update-card .card-body {
   padding-top: 0;
@@ -18401,13 +18315,7 @@ pre[class*=language-] > code {
 .app-design .progress-box .progress .progress-bar {
   border-radius: 30px;
 }
-.app-design .progress-box .progress .progress-bar label {
-  position: absolute;
-  top: -24px;
-  right: 0;
-  font-weight: 600;
-  font-size: 13px;
-}
+
 
 .user-card-full {
   overflow: hidden;
@@ -18522,13 +18430,6 @@ pre[class*=language-] > code {
   height: 25px;
 }
 
-.user-card .label {
-  border-radius: 15px;
-  padding: 5px 10px;
-  margin-right: 10px;
-  margin-bottom: 0;
-  box-shadow: var(--pc-card-box-shadow);
-}
 
 .leads-progress .progress,
 .progress-gender .progress {
@@ -18562,11 +18463,7 @@ pre[class*=language-] > code {
   transition: all 0.3s ease-in-out;
 }
 
-.Invoice-bar .invoice-lable label {
-  background: #fff;
-  border-radius: 15px;
-  padding: 4px 20px;
-}
+
 .Invoice-bar .inv-icon {
   background: rgba(255, 255, 255, 0.2);
   width: 70px;
@@ -18669,11 +18566,7 @@ pre[class*=language-] > code {
 .affilate-offers .card-icon {
   opacity: 0.5;
 }
-.affilate-offers .label {
-  border-radius: 15px;
-  margin: 0;
-  padding: 8px 18px;
-}
+
 
 .team-leader .slide li {
   width: 10px;
@@ -18742,11 +18635,7 @@ pre[class*=language-] > code {
 .project-task svg {
   opacity: 0.5;
 }
-.project-task .label {
-  border-radius: 15px;
-  margin: 0;
-  padding: 6px 16px;
-}
+
 .project-task .progress {
   height: 6px;
 }
@@ -18755,21 +18644,12 @@ pre[class*=language-] > code {
   opacity: 0.4;
 }
 
-.card-event .label {
-  border-radius: 15px;
-  margin: 0;
-  padding: 5px 16px;
-}
 .card-event svg {
   position: absolute;
   bottom: 20px;
   right: 25px;
 }
 
-.statistial-visit .label {
-  padding: 4px 10px;
-  border-radius: 40px;
-}
 
 .Design-sprint .design-image,
 .dashboard-kit .design-image {
@@ -18888,11 +18768,7 @@ pre[class*=language-] > code {
 .code-table .table td {
   vertical-align: middle;
 }
-.Application-list .table .label,
-.code-table .table .label {
-  padding: 4px 10px;
-  border-radius: 15px;
-}
+
 .Application-list thead th,
 .code-table thead th {
   border: 0;
@@ -20688,10 +20564,7 @@ pre[class*=language-] > code {
 .form-group {
   margin-bottom: 1rem;
 }
-.form-group label {
-  font-size: 14px;
-  font-weight: 500;
-}
+
 
 select.form-control:hover,
 .form-control:hover {
@@ -20722,20 +20595,6 @@ select.form-control[data-multiselectsplitter-firstselect-selector], select.form-
   background: none;
 }
 
-.form-floating > label {
-  top: 1px;
-}
-.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
-  color: #6c757d;
-}
-.form-floating > .form-control:focus ~ label,
-.form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .form-select ~ label {
-  color: #6c757d;
-}
-.form-floating > .form-control:focus ~ label {
-  color: var(--bs-primary);
-}
 .form-floating > input {
   color: #212529;
 }
@@ -20767,12 +20626,6 @@ select.form-control[data-multiselectsplitter-firstselect-selector], select.form-
   padding-left: 50px;
 }
 
-.form-check label {
-  cursor: pointer;
-}
-.form-check label input {
-  cursor: pointer;
-}
 .form-check .form-check-input.input-primary:checked {
   border-color: #1890ff;
   background-color: #1890ff;
@@ -20958,54 +20811,7 @@ select.form-control[data-multiselectsplitter-firstselect-selector], select.form-
   border-right: none;
 }
 
-.form-v1 .form-label-group {
-  position: relative;
-  margin-bottom: 1rem;
-}
-.form-v1 .form-label-group > input,
-.form-v1 .form-label-group > label {
-  height: 3.125rem;
-  padding: 0.75rem;
-}
-.form-v1 .form-label-group > label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  color: #495057;
-  pointer-events: none;
-  cursor: text;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  transition: all 0.1s ease-in-out;
-}
-.form-v1 .form-label-group input::-moz-placeholder {
-  color: transparent;
-}
-.form-v1 .form-label-group input::placeholder {
-  color: transparent;
-}
-.form-v1 .form-label-group input:not(:-moz-placeholder-shown) {
-  padding-top: 1.25rem;
-  padding-bottom: 0.25rem;
-}
-.form-v1 .form-label-group input:not(:placeholder-shown) {
-  padding-top: 1.25rem;
-  padding-bottom: 0.25rem;
-}
-.form-v1 .form-label-group input:not(:-moz-placeholder-shown) ~ label {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  font-size: 12px;
-  color: #777;
-}
-.form-v1 .form-label-group input:not(:placeholder-shown) ~ label {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  font-size: 12px;
-  color: #777;
-}
+
 
 .datepicker {
   width: 275px;
@@ -21560,26 +21366,6 @@ select.form-control[data-multiselectsplitter-firstselect-selector], select.form-
 .custom-switch-v1.form-switch .form-check-input.input-light-dark:checked {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='4.1' fill='%23141414'/%3e%3c/svg%3e");
 }
-.custom-switch-v1 .custom-control-label::before {
-  transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
-  height: 20px;
-  width: 35px;
-  border-radius: 0.8rem;
-  top: 0;
-  left: -2.55rem;
-}
-.custom-switch-v1 .custom-control-label::after {
-  top: calc(0.15625rem - 2px);
-  left: calc(-2.25rem - 4px);
-  height: 19px;
-  width: 19px;
-  border-radius: 0.7rem;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 0 rgba(0, 0, 0, 0.04), 0 4px 9px rgba(0, 0, 0, 0.13), 0 3px 3px rgba(0, 0, 0, 0.05);
-  transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
-}
-.custom-switch-v1 .custom-control-input:checked ~ .custom-control-label::after {
-  transform: translateX(0.95rem);
-}
 
 .row[data-multiselectsplitter-wrapper-selector] select {
   margin-bottom: 8px;
@@ -22099,10 +21885,7 @@ select.form-control[data-multiselectsplitter-firstselect-selector], select.form-
 .i-main .i-block i {
   font-size: 30px;
 }
-.i-main .i-block label {
-  margin-bottom: 0;
-  display: none;
-}
+
 .i-main .i-block span.ic-badge {
   position: absolute;
   bottom: 0;

@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('capacitacions', function (Blueprint $table) {
             $table->id();
-            $table->string('capacitacion', 50);
-            $table->unsignedBigInteger('unidad_id');
-            $table->unsignedBigInteger('analista_id');
-            $table->unsignedBigInteger('proveedor_id');
+            $table->unsignedBigInteger('capacitacion_id')->nullable();
+            $table->unsignedBigInteger('unidad_id')->nullable();
+            $table->unsignedBigInteger('analista_id')->nullable();
+            $table->unsignedBigInteger('proveedor_id')->nullable();
             $table->integer('scafid')->nullable();
             $table->integer('memo')->nullable();
             $table->date('fecha_solicitud')->nullable();
@@ -28,15 +28,21 @@ return new class extends Migration
             $table->string('tipo_pago', 15);
             $table->integer('cant_participantes');
             $table->integer('evento')->nullable();
-            $table->decimal('valor_unitario');
-            $table->decimal('valor_total');
+            $table->decimal('valor_unitario')->nullable();
+            $table->decimal('valor_total')->nullable();
             $table->string('fondo_certificado', 30)->nullable();
-            $table->integer('sol_inadeh');
-            $table->date('fecha_solicitud_inadeh');
-            $table->text('observaciones')->nullable();
+            $table->integer('sol_inadeh')->nullable();
+            $table->date('fecha_solicitud_inadeh')->nullable();
+            $table->string('observaciones')->nullable();
             $table->string('memo_daf', 15)->nullable();
             $table->date('fecha_envio_daf')->nullable();
-            $table->enum('estatus', ['Completado', 'No Realizado'])->default('En Espera');
+            $table->enum('estatus', ['Completado', 'No Realizado', 'En Espera'])->default('En Espera');
+
+            //LLaves Foraneas
+            $table->foreign('unidad_id')->references('id')->on('unidads');
+            $table->foreign('analista_id')->references('id')->on('analistas');
+            $table->foreign('proveedor_id')->references('id')->on('proveedors');
+            $table->foreign('capacitacion_id')->references('id')->on('add_capacitacions');
 
             $table->timestamps();
         });
